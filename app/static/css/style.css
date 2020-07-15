@@ -1,0 +1,15 @@
+.header, .nav{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    height: 70px;
+    background: black;
+    color: snow;
+    font-size: 30px;
+    justify-content: space-between;
+}
+.nav div{
+    margin: 0 20px;
+}

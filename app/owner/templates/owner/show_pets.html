@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for pet in owner.pets %}
+        <div><a href="{{ url_for('owner.show_owners_by_animal_type', types=pet.animal_type) }}">{{ pet }}</a>
+            <a href="{{ url_for('owner.del_pet', index=index, pet_index=owner.pets.index(pet)) }}">X</a></div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block add_item %}
+<div><a href="{{ url_for('owner.register_pet', index=index) }}">Register Pet</a></div>
+{% endblock %}
